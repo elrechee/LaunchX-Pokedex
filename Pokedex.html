@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Monda' rel='stylesheet'>
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Pokedex</title>
+</head>
+
+
+
+
+
+<body>
+    <div class="screen">
+        <h1 class="titulo">Pokedex Nacional</h1>
+
+
+        <section class="Hlist">
+            <div>
+                <input class="BarBuscar" type="text" id="input_buscar" name="btn_buscar" onkeypress="clickPress(event)">
+                <button onclick="BuscarPoke()">Buscar</button>
+            </div>
+            <button onclick="Pokerand()">Pokemon misterioso</button>
+        </section>
+        <br>
+        <section class="Hlist">
+            <button onclick="sigPoke(false)">Pokemon anterior</button>
+            <h2 class="titulo" id="outNombre">Nombre del Pokemon</h2>
+            <button onclick="sigPoke(true)">Siguiete Pokemon</button>
+
+        </section>
+        <br>
+        <section class="Hlist">
+            <div class="Hlist fx_g1">
+                <div>
+                    <button class="icono" id="btn_FM" onclick="cambioMF()"><img id="img_MF" src="./img/male.png" alt="setso" height="32px"></button><br><br>
+                    <button class="icono" id="btn_SH" onclick="cambioSH()"><img src="./img/shine.png" alt="shiny" height="32px"></button>
+                </div>
+                <div>
+                    <img src="https://3.bp.blogspot.com/_VVeOoCLARgI/TUsBJ9HtCfI/AAAAAAAAADw/gnkNcMHjtws/s1600/The_Electric_Tale_of_Pikachu_by_Gumbogamer.png" alt="Imagen de Pokemon" id="img-pkm" height="150px">
+                </div>
+                
+            </div>
+
+            <table class="fx_g1 datos">
+                <tr>
+                    <th class="titulo">Tipos: </th>
+                    <td class="Hlist">
+                        <p class="tipos" id="type1">Tipo 1</p>
+                        <p class="tipos" id="type2">Tipo 2</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="titulo" >Altura: </th>
+                    <td id="outAltura"></td>
+                </tr>
+                <tr>
+                    <th class="titulo" >Peso: </th>
+                    <td id="outPeso"></td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section class="desc">
+            <div class="Hlist">
+                <h3 class="titulo">Descripcion:</h3>
+                <select class="BarBuscar" name="sel_desc" id="sel_desc"></select>
+
+            </div>
+            <p class="mgn_10px" id="outDesc">Aqui va la Descripcion del Pokedex</p>
+            <br>
+        </section>    
+        
+    </div>
+    
+</body>
+
+<footer> 
+    <script src="./Pokedex.js"></script>
+</footer>
+</html>
