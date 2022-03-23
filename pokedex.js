@@ -55,6 +55,8 @@ const Pokerand = function(){
      }).then((data)=>{
          if(data){
              console.log(data);
+             //remover todos los elementos del select
+             aux_sel.innerHTML = "";
              for (let i = 0 ; i < data.flavor_text_entries.length; i++ ){
                  if (data.flavor_text_entries[i].language.name =='es'){
                      //crear un select con las diferentes descripciones de los diferentes juegos
@@ -79,10 +81,7 @@ const Pokerand = function(){
  }
 
 const fetchPokemon = function(buscar){
-    //Remover todos los elementos del select 
-    for( let i = 0; i < PokeDesc.juego.length ; i++){
-        aux_sel.remove(0);
-    }
+
     //buscar el pokemon indicado
     const url = `https://pokeapi.co/api/v2/pokemon/${buscar}`;
     fetch(url).then((res) => {
